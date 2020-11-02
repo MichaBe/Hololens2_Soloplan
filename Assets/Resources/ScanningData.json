@@ -155,6 +155,106 @@
 					"weight": 8.1
 				}
 			]
+		},
+		{
+			"id": 172838,
+			"tourNumber": 99222,
+			"areaType": 1,
+			"ssccs": [
+				{
+					"id": 138204,
+					"code": "400000000000400007",
+					"posId": 138519,
+					"posNumber": 1,
+					"comment": null,
+					"creator": null,
+					"SSCCStatus": 1,
+					"destinationLane": {
+						"id": 139065,
+						"designation": "Lane 1",
+						"laneType": 3
+					},
+
+					"weight": 12.3
+
+				},
+				{
+					"id": 139192,
+					"code": "400000000000400077",
+					"posId": 139112,
+					"posNumber": 5,
+					"comment": null,
+					"creator": null,
+					"SSCCStatus": 0,
+					"destinationLane": {
+						"id": 146275,
+						"designation": "Zwischenlager",
+						"laneType": 4
+					},
+
+					"weight": 2.9
+				},
+				{
+					"id": 139193,
+					"code": "400000000000400074",
+					"posId": 139117,
+					"posNumber": 6,
+					"comment": null,
+					"creator": null,
+					"SSCCStatus": 0,
+					"destinationLane": {
+						"id": 149367,
+						"designation": "Zwischenlager",
+						"laneType": 4
+					},
+
+					"weight": 8.6
+				}
+			]
+		},
+		{
+			"id": 172998,
+			"tourNumber": 44222,
+			"areaType": 2,
+			"ssccs": [
+				{
+					"id": 1382022,
+					"code": "400000000000400031",
+					"posId": 138519,
+					"posNumber": 1,
+					"comment": null,
+					"creator": null,
+					"SSCCStatus": 1,
+			
+
+					"weight": 16.4
+
+				},
+				{
+					"id": 139115,
+					"code": "400000000000400032",
+					"posId": 139112,
+					"posNumber": 2,
+					"comment": null,
+					"creator": null,
+					"SSCCStatus": 0,
+					
+
+					"weight": 1.5
+				},
+				{
+					"id": 139144,
+					"code": "400000000000400023",
+					"posId": 139117,
+					"posNumber": 3,
+					"comment": null,
+					"creator": null,
+					"SSCCStatus": 0,
+					
+
+					"weight": 5.3
+				}
+			]
 		}
 	]
 }
