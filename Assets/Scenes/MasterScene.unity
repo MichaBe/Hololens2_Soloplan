@@ -892,7 +892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &44051515
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   currentUI: {fileID: 736771977}
   nextUI: {fileID: 2009927359}
   ErrorUI: {fileID: 255008163}
-  employeeInformation: {fileID: 0}
+  employeeInformation: {fileID: 332216356}
   objectToScan: {fileID: 168278914}
   scanPosition: {fileID: 2099644141}
   startPosition: {fileID: 404409098}
@@ -32261,7 +32261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logoutScreen: {fileID: 0}
   gameobjectsToDisable: []
-  employeeInformation: {fileID: 0}
+  employeeInformation: {fileID: 332216356}
 --- !u!1 &948314191
 GameObject:
   m_ObjectHideFlags: 0
@@ -47867,6 +47867,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -75285,7 +75296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2009927360
 RectTransform:
   m_ObjectHideFlags: 0
@@ -75332,8 +75343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa2a2391a06beb846b62e7217a84e0c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EmployeePanel: {fileID: 0}
-  useOnEnable: 1
+  EmployeePanel: {fileID: 1253494691}
+  useOnEnable: 0
   useOnDisable: 0
 --- !u!114 &2009927363
 MonoBehaviour:
