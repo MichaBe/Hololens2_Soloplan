@@ -2540,7 +2540,6 @@ GameObject:
   - component: {fileID: 505197176163985612}
   - component: {fileID: 8053426469028994140}
   - component: {fileID: 8552873866874773989}
-  - component: {fileID: 8133275581035155511}
   m_Layer: 0
   m_Name: EmployeeInformation
   m_TagString: Untagged
@@ -2661,7 +2660,7 @@ MonoBehaviour:
   TouchEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8133275581035155511}
+      - m_Target: {fileID: 0}
         m_MethodName: ButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -2821,32 +2820,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724341da07c2e1742a82bcc156a2461d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8133275581035155511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2298607923655559658}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbafc2212f39544419c4bd526565fb84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logoutScreen: {fileID: 0}
-  gameobjectsToDisable:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  employeeInformation: {fileID: 2983658885874534729}
 --- !u!1 &4222825305326409198
 GameObject:
   m_ObjectHideFlags: 0
@@ -3111,7 +3084,6 @@ GameObject:
   - component: {fileID: 3457168039917130911}
   - component: {fileID: 8921010791748922366}
   - component: {fileID: 5961050955829060198}
-  - component: {fileID: 8289366596603898756}
   m_Layer: 0
   m_Name: BackPlate
   m_TagString: Untagged
@@ -3180,21 +3152,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8289366596603898756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6645760593283948468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbafc2212f39544419c4bd526565fb84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logoutScreen: {fileID: 0}
-  gameobjectsToDisable: []
-  employeeInformation: {fileID: 2983658885874534729}
 --- !u!1 &8283855223624509469
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,7 +3303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: text
+  m_text: Select Login
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3415,10 +3372,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2983658885874534729}
-    characterCount: 4
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
