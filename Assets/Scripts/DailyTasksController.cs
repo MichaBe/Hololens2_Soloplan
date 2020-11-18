@@ -1,9 +1,13 @@
-﻿using Microsoft.MixedReality.Toolkit.Utilities;
+﻿using Microsoft.MixedReality.Toolkit.UI;
+using Microsoft.MixedReality.Toolkit.Utilities;
 using TMPro;
 using UnityEngine;
 
 public class DailyTasksController : MonoBehaviour
 {
+    public GameObject currentUI;
+    public GameObject nextUI;
+
     private DataManager manager;
 
     // Start is called before the first frame update
@@ -38,9 +42,18 @@ public class DailyTasksController : MonoBehaviour
             var timeTMP = taskContent.transform.Find("Time/TextMeshPro").gameObject;
             timeTMP.GetComponent<TextMeshPro>().text = tour.startTime;
 
-            //set Line
+            // set line
             var lineTMP = taskContent.transform.Find("Line/TextMeshPro").gameObject;
             lineTMP.GetComponent<TextMeshPro>().text = tour.startLane;
+
+            // set tour id
+            var tourIdTMP = taskContent.transform.Find("TourId/TextMeshPro").gameObject;
+            var tourIdAsString = "" + tour.id;
+            tourIdTMP.GetComponent<TextMeshPro>().text = tourIdAsString;
+
+            // set Click event 
+            var interactable = task.GetComponent<Interactable>();
+            AddOnClick(interactable, tourIdAsString);
         }
 
         // hide the task template
@@ -48,5 +61,14 @@ public class DailyTasksController : MonoBehaviour
 
         // update Layout 
         taskCollection.GetComponent<GridObjectCollection>().UpdateCollection();
+    }
+
+    private void AddOnClick(Interactable interactable, string tourId)
+    {
+        interactable.OnClick.AddListener(() =>
+        {
+            DataManager.Instance.CheckID(tourId, CheckIdType.tour, currentUI, nextUI, null);
+            Debug.Log("Interactable clicked" + tourId);
+        });
     }
 }
