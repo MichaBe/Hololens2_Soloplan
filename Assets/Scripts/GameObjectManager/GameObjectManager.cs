@@ -21,22 +21,23 @@ public class GameObjectManager : MonoBehaviour
 
     public void setActiveGameObjectsInactive()
     {
-        Debug.Log("setActiveGameObjectsInactive is called");
-        findGameObjectsByName();
-        GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
-        foreach (GameObject go in allObjects)
-            if (System.Array.IndexOf(mainScreenObjects, go) != -1)
+        mainScreenObjects = findActiveGameObjectsByName();
+        foreach (GameObject go in mainScreenObjects)
+        {
+            if (go != null)
             {
                 go.SetActive(false);
             }
+        }
     }
 
-    private void findGameObjectsByName()
-    {
+    private GameObject[] findActiveGameObjectsByName()
+    { 
+        GameObject[] gameObjects = new GameObject[mainScreenNames.Length];
         for (int i = 0; i < mainScreenNames.Length; i++)
         {
-            mainScreenObjects[i] = GameObject.Find(mainScreenNames[i]);
-            Debug.Log(mainScreenObjects[i]);
+            gameObjects[i] = GameObject.Find(mainScreenNames[i]);
         }
+        return gameObjects;
     }
 }
