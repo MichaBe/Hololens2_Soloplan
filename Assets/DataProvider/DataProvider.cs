@@ -39,7 +39,9 @@ namespace DataProvider
     {
         public int id;
         public int tourNumber;  //short number/name
-        public int areaType;    //1=inbound
+        public int areaType;    //1=inbound , 2=outbound
+        public String startTime;
+        public String startLane;
         public PackageData[] ssccs;
 
     }
@@ -109,6 +111,11 @@ namespace DataProvider
             dJSONData.tourData.SetValue(tour, index);
 
             saveOnDisk();
+        }
+
+        public TourData [] GetAllTours()
+        {
+            return dJSONData.tourData;
         }
     }
 }

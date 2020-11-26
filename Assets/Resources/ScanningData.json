@@ -14,6 +14,8 @@
 			"id": 139149,
 			"tourNumber": 11482,
 			"areaType": 1,
+			"startLane": 5,
+			"startTime": "10:00",
 			"ssccs": [
 				{
 					"id": 138969,
@@ -104,6 +106,8 @@
 			"id": 172839,
 			"tourNumber": 99283,
 			"areaType": 1,
+			"startLane": 10,
+			"startTime": "10:50",
 			"ssccs": [
 				{
 					"id": 138204,
@@ -160,6 +164,8 @@
 			"id": 172838,
 			"tourNumber": 99222,
 			"areaType": 1,
+			"startLane": 3,
+			"startTime": "12:00",
 			"ssccs": [
 				{
 					"id": 138204,
@@ -216,6 +222,8 @@
 			"id": 172998,
 			"tourNumber": 44222,
 			"areaType": 2,
+			"startLane": 12,
+			"startTime": "11:15",
 			"ssccs": [
 				{
 					"id": 1382022,
