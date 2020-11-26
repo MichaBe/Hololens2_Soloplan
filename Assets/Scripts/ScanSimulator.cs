@@ -40,8 +40,7 @@ public class ScanSimulator : MonoBehaviour
         scanArea = transform.GetComponent<Image>();
 
         fadeAmount = 1 / (1.0f / 0.05f);
-
-        DataManager.Instance.setCurrentTour(139149);
+        
         currIDPos = 0;
         if (randomPackageIds)
         {
