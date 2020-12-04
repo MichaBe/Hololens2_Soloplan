@@ -116,7 +116,7 @@
 					"posNumber": 1,
 					"comment": null,
 					"creator": null,
-					"SSCCStatus": 1,
+					"SSCCStatus": 0,
 					"destinationLane": {
 						"id": 139065,
 						"designation": "Lane 1",
@@ -174,7 +174,7 @@
 					"posNumber": 1,
 					"comment": null,
 					"creator": null,
-					"SSCCStatus": 1,
+					"SSCCStatus": 0,
 					"destinationLane": {
 						"id": 139065,
 						"designation": "Lane 1",
@@ -232,7 +232,7 @@
 					"posNumber": 1,
 					"comment": null,
 					"creator": null,
-					"SSCCStatus": 1,
+					"SSCCStatus": 0,
 			
 
 					"weight": 16.4

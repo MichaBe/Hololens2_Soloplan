@@ -20,7 +20,7 @@ public class DailyTasksController : MonoBehaviour
         foreach (var tour in tourList)
         {
             Debug.Log(JsonUtility.ToJson(tour.areaType));
-            var task = Instantiate(taskButtonTemplate, taskCollection.transform);
+            var task = Instantiate(taskButtonTemplate, taskCollection.transform); // taskCollection.transform is the Parent
             var taskContent = task.transform.Find("ButtonContent").gameObject;
             var textMesh = taskContent.transform.Find("IconAndText/TextMeshPro").gameObject;
             var mText = textMesh.GetComponent<TextMeshPro>();
