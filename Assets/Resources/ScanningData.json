@@ -232,7 +232,7 @@
 					"posNumber": 1,
 					"comment": null,
 					"creator": null,
-					"SSCCStatus": 0,
+					"SSCCStatus": 1,
 			
 
 					"weight": 16.4
@@ -245,7 +245,7 @@
 					"posNumber": 2,
 					"comment": null,
 					"creator": null,
-					"SSCCStatus": 0,
+					"SSCCStatus": 2,
 					
 
 					"weight": 1.5
@@ -257,7 +257,7 @@
 					"posNumber": 3,
 					"comment": null,
 					"creator": null,
-					"SSCCStatus": 0,
+					"SSCCStatus": 3,
 					
 
 					"weight": 5.3
