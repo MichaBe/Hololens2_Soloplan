@@ -19,10 +19,11 @@ public class PackageListControlNew : MonoBehaviour
     private DataManager manager;
 
 
-    private void Start()
+    void OnEnable()
     {
         manager = DataManager.Instance;
         InitList();
+        UpdateList();
     }
 
     private void InitList()
