@@ -23,20 +23,19 @@ public class PackageListControlNew : MonoBehaviour
     {
         manager = DataManager.Instance;
         InitList();
-        UpdateList();
     }
 
     private void InitList()
     {
-        RemoveList();
         titel.text = "Tour: " + manager.currentTour.id;
         foreach (var package in manager.currentTour.ssccs)
         {
-            var packageUiItem = Instantiate(itemTemplate, packageCollection.transform);
+            var packageUiItem = Instantiate(itemTemplate);
             packageUiItem.SetActive(true);
             var textMesh = packageUiItem.transform.Find("Title").gameObject;
             var packageText = textMesh.GetComponent<TextMeshPro>();
             packageText.text = "Paket\n" + package.code;
+            packageUiItem.transform.SetParent(packageCollection.transform,false);
         }
 
         // hide the package item template
@@ -84,12 +83,10 @@ public class PackageListControlNew : MonoBehaviour
         }
     }
 
-    private void RemoveList()
+    public void RemoveList()
     {
-        for (var i = 0; i < packageCollection.transform.childCount; i++)
-        {
-            packageCollection.transform.GetChild(i).gameObject.SetActive(false);
-            Destroy(packageCollection.transform.GetChild(i).gameObject);
+        foreach (Transform child in packageCollection.transform) {
+            Destroy(child.gameObject);
         }
     }
 }
