@@ -22,37 +22,49 @@ public class PackageListControlNew : MonoBehaviour
     private void Start()
     {
         manager = DataManager.Instance;
+        InitList();
+    }
+
+    private void InitList()
+    {
+        RemoveList();
+        titel.text = "Tour: " + manager.currentTour.id;
+        foreach (var package in manager.currentTour.ssccs)
+        {
+            var packageUiItem = Instantiate(itemTemplate, packageCollection.transform);
+            packageUiItem.SetActive(true);
+            var textMesh = packageUiItem.transform.Find("Title").gameObject;
+            var packageText = textMesh.GetComponent<TextMeshPro>();
+            packageText.text = "Paket\n" + package.code;
+        }
+
+        // hide the package item template
+        itemTemplate.SetActive(false);
+
+        // update Layout 
+        packageCollection.UpdateCollection();
         UpdateList();
     }
 
     public void UpdateList()
     {
-        RemoveList();
-
-        titel.text = "Tour: " + manager.currentTour.id;
+        var index = 0;
         foreach (var package in manager.currentTour.ssccs)
         {
-            var packageUiItem = Instantiate(itemTemplate, packageCollection.transform);
-            var textMesh = packageUiItem.transform.Find("Title").gameObject;
-            var packageText = textMesh.GetComponent<TextMeshPro>();
-            packageText.text = "Paket\n" + package.code;
-            setBackgroundColorAccordingToPackageStatus(packageUiItem, packageText, package);
+            SetBackgroundColorAccordingToPackageStatus(package, index);
+            index++;
         }
-
-        // hide the package item template
-        Destroy(itemTemplate);
-
-        // update Layout 
-        packageCollection.UpdateCollection();
     }
 
-    private void setBackgroundColorAccordingToPackageStatus(GameObject packageUiItem, TextMeshPro packageText,
-        PackageData package)
+    private void SetBackgroundColorAccordingToPackageStatus(PackageData package, int index)
     {
+        var packageUiItem = packageCollection.transform.GetChild(index).gameObject;
         var backPlate = packageUiItem.transform.Find("BackPlate").gameObject;
+        var textMesh = packageUiItem.transform.Find("Title").gameObject;
+        var packageText = textMesh.GetComponent<TextMeshPro>();
 
         // set color for currently scanned package
-        if (manager.currentPackage.code == package.code)
+        if (manager.currentPackage != null && manager.currentPackage.code == package.code)
             backPlate.GetComponent<Renderer>().material.color = soloplanColor;
 
         var packageStatus = package.SSCCStatus;
@@ -60,7 +72,6 @@ public class PackageListControlNew : MonoBehaviour
         {
             case 1: // SSCCStatus = 1  means package is processed normally 
                 backPlate.GetComponent<Renderer>().material.color = successColor;
-                packageText.color = Color.black;
                 break;
             case 2: // SSCCStatus = 2  means package is damaged 
                 backPlate.GetComponent<Renderer>().material.color = warningColor;
@@ -68,12 +79,16 @@ public class PackageListControlNew : MonoBehaviour
                 break;
             case 3: // SSCCStatus = 3  means package is missing 
                 backPlate.GetComponent<Renderer>().material.color = failureColor;
-                // packageText.color = Color.black;
                 break;
         }
     }
 
     private void RemoveList()
     {
+        for (var i = 0; i < packageCollection.transform.childCount; i++)
+        {
+            packageCollection.transform.GetChild(i).gameObject.SetActive(false);
+            Destroy(packageCollection.transform.GetChild(i).gameObject);
+        }
     }
 }

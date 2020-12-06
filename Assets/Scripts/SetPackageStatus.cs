@@ -6,7 +6,7 @@ using UnityEngine;
 public class SetPackageStatus : MonoBehaviour
 {
     [SerializeField]
-    private PackageListControl packageListcontrol;
+    private PackageListControlNew packageListControl;
     public PackageReportCode packageStatus;
 
     [SerializeField]
@@ -25,7 +25,7 @@ public class SetPackageStatus : MonoBehaviour
     {
         manager.currentPackage.SSCCStatus = (int)packageStatus;
 
-        packageListcontrol.UpdateList();
+        packageListControl.UpdateList();
         packageProgressExtended.UpdateProgressBar();
         packageProgressContracted.UpdateProgressBar();
     }
