@@ -24,6 +24,7 @@ public class ScanSimulator : MonoBehaviour
     public GameObject nextUI;
     public GameObject ErrorUI;
     public TextMeshProUGUI employeeInformation;
+    public PackageListControlNew tourlist;
 
     public GameObject objectToScan;
     public Transform scanPosition;
@@ -129,6 +130,10 @@ public class ScanSimulator : MonoBehaviour
                     if (sDatatype == CheckIdType.login)
                     {
                         employeeInformation.text = DataManager.Instance.currentEmployee.name + "\n" + DataManager.Instance.currentEmployee.id;
+                    }
+                    else if ((sDatatype == CheckIdType.package) && tourlist)
+                    {
+                        tourlist.UpdateList();
                     }
                 }
             }
