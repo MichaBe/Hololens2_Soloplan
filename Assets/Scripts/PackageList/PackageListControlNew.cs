@@ -20,9 +20,15 @@ public class PackageListControlNew : MonoBehaviour
 
 
     void OnEnable()
-    {
+    {   
+       
         manager = DataManager.Instance;
         InitList();
+    }
+
+    void OnDisable()
+    {
+        RemoveList();
     }
 
     private void InitList()
@@ -73,13 +79,14 @@ public class PackageListControlNew : MonoBehaviour
             case 1: // SSCCStatus = 1  means package is processed normally 
                 backPlate.GetComponent<Renderer>().material.color = successColor;
                 break;
-            case 2: // SSCCStatus = 2  means package is damaged 
+            case 2: // SSCCStatus = 2  means package is missing 
+                backPlate.GetComponent<Renderer>().material.color = failureColor;
+                break;
+            case 3: // SSCCStatus = 3  means package is damaged 
                 backPlate.GetComponent<Renderer>().material.color = warningColor;
                 packageText.color = Color.black;
                 break;
-            case 3: // SSCCStatus = 3  means package is missing 
-                backPlate.GetComponent<Renderer>().material.color = failureColor;
-                break;
+            
         }
     }
 
