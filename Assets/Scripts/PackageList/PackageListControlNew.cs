@@ -1,4 +1,5 @@
-﻿using DataProvider;
+﻿using System;
+using DataProvider;
 using Microsoft.MixedReality.Toolkit.Utilities;
 using TMPro;
 using UnityEngine;
@@ -15,14 +16,9 @@ public class PackageListControlNew : MonoBehaviour
     private readonly Color32 soloplanColor = new Color32(173, 20, 93, 1);
     private readonly Color32 successColor = new Color32(21, 175, 70, 1);
     private readonly Color32 warningColor = new Color32(246, 231, 133, 1);
-
-    private DataManager manager;
-
-
+    
     void OnEnable()
-    {   
-       
-        manager = DataManager.Instance;
+    {
         InitList();
     }
 
@@ -33,8 +29,8 @@ public class PackageListControlNew : MonoBehaviour
 
     private void InitList()
     {
-        titel.text = "Tour: " + manager.currentTour.id;
-        foreach (var package in manager.currentTour.ssccs)
+        titel.text = "Tour: " + DataManager.Instance.currentTour.id;
+        foreach (var package in DataManager.Instance.currentTour.ssccs)
         {
             var packageUiItem = Instantiate(itemTemplate);
             packageUiItem.SetActive(true);
@@ -55,7 +51,7 @@ public class PackageListControlNew : MonoBehaviour
     public void UpdateList()
     {
         var index = 0;
-        foreach (var package in manager.currentTour.ssccs)
+        foreach (var package in DataManager.Instance.currentTour.ssccs)
         {
             SetBackgroundColorAccordingToPackageStatus(package, index);
             index++;
@@ -70,7 +66,7 @@ public class PackageListControlNew : MonoBehaviour
         var packageText = textMesh.GetComponent<TextMeshPro>();
 
         // set color for currently scanned package
-        if (manager.currentPackage != null && manager.currentPackage.code == package.code)
+        if (DataManager.Instance.currentPackage != null && DataManager.Instance.currentPackage.code == package.code)
             backPlate.GetComponent<Renderer>().material.color = soloplanColor;
 
         var packageStatus = package.SSCCStatus;

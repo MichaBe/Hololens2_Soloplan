@@ -131,7 +131,7 @@ public class ScanSimulator : MonoBehaviour
                     {
                         employeeInformation.text = DataManager.Instance.currentEmployee.name + "\n" + DataManager.Instance.currentEmployee.id;
                     }
-                    else if ((sDatatype == CheckIdType.package) && tourlist)
+                    else if ((sDatatype == CheckIdType.package) && tourlist.isActiveAndEnabled)
                     {
                         tourlist.UpdateList();
                     }

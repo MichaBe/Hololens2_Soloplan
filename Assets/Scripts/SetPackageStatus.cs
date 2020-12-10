@@ -24,9 +24,12 @@ public class SetPackageStatus : MonoBehaviour
     public void setCurrentPackageStatus()
     {
         manager.currentPackage.SSCCStatus = (int)packageStatus;
-
-        packageListControl.UpdateList();
+        if (packageListControl.isActiveAndEnabled)
+        {
+            packageListControl.UpdateList();
+        }
         packageProgressExtended.UpdateProgressBar();
         packageProgressContracted.UpdateProgressBar();
+        manager.currentPackage = null;
     }
 }
