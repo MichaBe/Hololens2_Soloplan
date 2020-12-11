@@ -29,11 +29,13 @@ public class BarcodeScanning : MonoBehaviour
     public GameObject ErrorUI;
 
     private GameObject gameManager;
+    private IBarcodeReader barcodeReader;
 
     void Awake()
     {
         if (gameObject.GetComponent<BarcodeScanning>().enabled)
         {
+            barcodeReader = new BarcodeReader();
             scanArea = transform.GetComponent<Image>();
             screenRect = new Rect(0, 0, Screen.width, Screen.height);
             gameManager = GameObject.FindGameObjectWithTag("Manager");
@@ -82,7 +84,7 @@ public class BarcodeScanning : MonoBehaviour
                     wCamTexture.Play();
                 }
 
-                IBarcodeReader barcodeReader = new BarcodeReader();
+               
                 barcodeReader.Options.PossibleFormats = new System.Collections.Generic.List<BarcodeFormat>();
                 barcodeReader.Options.PossibleFormats.Add(BarcodeFormat.QR_CODE);
                 barcodeReader.Options.TryHarder = false;

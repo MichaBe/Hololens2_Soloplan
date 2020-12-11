@@ -9,12 +9,14 @@ public class BarcodeTester : MonoBehaviour
 {
     private WebCamTexture wCamTexture;
     private Rect screenRect;
-    Image scanArea;
+    private IBarcodeReader barcodeReader;
 
     int delay = 0;
+    Image scanArea;
 
     void Awake()
     {
+        barcodeReader = new BarcodeReader();
         scanArea = transform.GetComponent<Image>();
         screenRect = new Rect(0, 0, Screen.width, Screen.height);
         wCamTexture = new WebCamTexture();
@@ -37,7 +39,6 @@ public class BarcodeTester : MonoBehaviour
         {
             try
             {
-                IBarcodeReader barcodeReader = new BarcodeReader();
                 var result = barcodeReader.Decode(wCamTexture.GetPixels32(),
                   wCamTexture.width, wCamTexture.height);
                 if (result != null)
@@ -49,7 +50,9 @@ public class BarcodeTester : MonoBehaviour
                     Debug.Log("No QR-Code Found");
                 }
             }
-            catch (Exception ex) { Debug.LogWarning(ex.Message); }
+            catch (Exception ex) { 
+                Debug.LogWarning(ex.Message);
+            }
             delay = 0;
         }
     }
