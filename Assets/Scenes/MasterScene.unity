@@ -10881,7 +10881,7 @@ PrefabInstance:
     - target: {fileID: 537923142695527386, guid: 7856a4a6795c62241bc31d1e7a1854a4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 537923142695527387, guid: 7856a4a6795c62241bc31d1e7a1854a4,
         type: 3}
@@ -11804,6 +11804,11 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 338588380}
+    - target: {fileID: 2184106445137563974, guid: 197ded485a3ee564b87a18246d11eaaf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2184106445137563975, guid: 197ded485a3ee564b87a18246d11eaaf,
         type: 3}
       propertyPath: objectToScan

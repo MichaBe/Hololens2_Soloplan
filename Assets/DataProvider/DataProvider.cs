@@ -17,7 +17,7 @@ namespace DataProvider
     {
         public int id;
         public string designation;
-        public int laneType;
+        public string laneType;
     }
 
     [Serializable]
@@ -25,9 +25,9 @@ namespace DataProvider
     {
         public int id;
         public string code; //NVE-Number, Barcode/QR-Code
-        public int posId;   //internal reference
+        public int posId;   //internal reference // TODO: delete this, its never used
         public string comment;
-        public string creator;
+        public string creator; // TODO: delete this, its never used
         public int SSCCStatus;  //0=not set, 1=successfully scanned
         public Destination destinationLane;
 

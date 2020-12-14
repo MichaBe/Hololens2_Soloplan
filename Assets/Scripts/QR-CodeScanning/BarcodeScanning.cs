@@ -29,6 +29,8 @@ public class BarcodeScanning : MonoBehaviour
     public GameObject ErrorUI;
 
     private GameObject gameManager;
+    
+    public PackageListControlNew tourlist;
 
     void Awake()
     {
@@ -99,6 +101,10 @@ public class BarcodeScanning : MonoBehaviour
                     else if (manager.CheckID(result.Text, sDatatype, transform.parent.gameObject, nextUI, ErrorUI))
                     {
                         wCamTexture.Stop();
+                        if (sDatatype == CheckIdType.package)
+                        {
+                            tourlist.UpdateList();
+                        }
                     }
 
                 }

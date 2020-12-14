@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoloLensScene.unity
     guid: c74822ce626dc194ea407cc1b7452109
+  - enabled: 1
+    path: Assets/Scenes/MasterScene.unity
+    guid: f32a5c8a683b4f54bb73347910218d0c
   m_configObjects: {}
