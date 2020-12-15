@@ -25,6 +25,7 @@ public class ScanSimulator : MonoBehaviour
     public GameObject ErrorUI;
     public TextMeshProUGUI employeeInformation;
     public PackageListControlNew tourlist;
+    public GameObject groundNavigation;
 
     public GameObject objectToScan;
     public Transform scanPosition;
@@ -134,6 +135,7 @@ public class ScanSimulator : MonoBehaviour
                     else if ((sDatatype == CheckIdType.package) && tourlist.isActiveAndEnabled)
                     {
                         tourlist.UpdateList();
+                        groundNavigation.SetActive(true);
                     }
                 }
             }

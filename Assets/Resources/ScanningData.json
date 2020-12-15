@@ -17,7 +17,7 @@
 		{
 			"id": 648925,
 			"areaType": 1,
-			"startLane": 1,
+			"startLane": "1",
 			"startTime": "15:00",
 			"ssccs": [
 				{
@@ -81,7 +81,7 @@
 		},{
 			"id": 983451,
 			"areaType": 2,
-			"startLane": 10,
+			"startLane": "10",
 			"startTime": "16:00",
 			"ssccs": [
 				{
@@ -132,7 +132,7 @@
 		{
 			"id": 675231,
 			"areaType": 1,
-			"startLane": 2,
+			"startLane": "2",
 			"startTime": "16:45",
 			"ssccs": [
 				{
@@ -197,7 +197,7 @@
 		{
 			"id": 756248,
 			"areaType": 2,
-			"startLane": 11,
+			"startLane": "11",
 			"startTime": "17:30",
 			"ssccs": [
 				{

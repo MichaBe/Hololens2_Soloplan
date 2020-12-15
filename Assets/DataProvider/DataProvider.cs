@@ -18,6 +18,7 @@ namespace DataProvider
         public int id;
         public string designation;
         public string laneType;
+        public int posInLane;
     }
 
     [Serializable]
