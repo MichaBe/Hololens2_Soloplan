@@ -11,6 +11,13 @@ public class SetDestinationPanel : MonoBehaviour
 
     private void OnEnable()
     {
-        destination.text = DataManager.Instance.currentPackage.destinationLane.designation;
+        if (DataManager.Instance.currentTour.areaType == 2) // Falls Einladen
+        {
+            destination.text= "In den LKW";
+        }
+        else
+        {
+            destination.text = DataManager.Instance.currentPackage.destinationLane.designation;
+        }
     }
 }

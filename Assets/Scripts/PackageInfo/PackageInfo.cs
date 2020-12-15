@@ -31,10 +31,17 @@ public class PackageInfo : MonoBehaviour
 
         if (package != null)
         {
-            string lane = package.destinationLane.designation;
-            packageTitle.text = "[ " + lane + " ]";
 
-
+            if (DataManager.Instance.currentTour.areaType == 2) // Falls Einladen
+            {
+                packageTitle.text = "[ In den LKW ]";
+            }
+            else // sonst ist es ausladen
+            {
+                string lane = package.destinationLane.designation;
+                packageTitle.text = "[ " + lane + " ]";
+            }
+         
             int packageIndex = Array.FindIndex(DataManager.Instance.currentTour.ssccs, it => it.code == DataManager.Instance.currentPackage.code) + 1;
             int tourPackagesCount = DataManager.Instance.currentTour.ssccs.Length;
             infoString += "Package: " + packageIndex.ToString() + "/" + tourPackagesCount.ToString() + "\n";
