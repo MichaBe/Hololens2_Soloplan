@@ -36,7 +36,7 @@ public class ScanSimulator : MonoBehaviour
     private MeshRenderer scanObjectMeshRenderer;
     float fadeAmount;
 
-    void Start()
+    void OnEnable()
     {
         scanArea = transform.GetComponent<Image>();
 
