@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class PackageListControlNew : MonoBehaviour
 {
-    [SerializeField] private GameObject itemTemplate;
+    [SerializeField] protected GameObject itemTemplate;
 
-    [SerializeField] private TextMeshPro titel;
+    [SerializeField] protected TextMeshPro titel;
 
-    [SerializeField] private GridObjectCollection packageCollection;
-
+    [SerializeField] protected GridObjectCollection packageCollection;
+    
     private readonly Color32 failureColor = new Color32(247, 71, 71, 1);
     private readonly Color32 soloplanColor = new Color32(173, 20, 93, 1);
     private readonly Color32 successColor = new Color32(21, 175, 70, 1);

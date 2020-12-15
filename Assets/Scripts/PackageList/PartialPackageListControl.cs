@@ -83,7 +83,6 @@ public class PartialPackageListControl : MonoBehaviour
                 button.SetActive(true);
 
                 PackageListButton packageListButton = button.GetComponent<PackageListButton>();
-                packageListButton.SetText(t.code);
 
                 packageListButton.currentUI = currentUI;
                 packageListButton.nextUI = reportUI;
