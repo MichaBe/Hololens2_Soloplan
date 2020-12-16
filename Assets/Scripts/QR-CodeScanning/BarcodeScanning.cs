@@ -27,6 +27,7 @@ public class BarcodeScanning : MonoBehaviour
 
     public GameObject nextUI;
     public GameObject ErrorUI;
+    public GroundNavigationController groundNavigation;
 
     private GameObject gameManager;
     
@@ -106,9 +107,9 @@ public class BarcodeScanning : MonoBehaviour
                         if (sDatatype == CheckIdType.package)
                         {
                             tourlist.UpdateList();
+                            groundNavigation.updateGroundNavigation();
                         }
                     }
-
                 }
             }
             catch (Exception ex) { Debug.LogWarning(ex.Message); }
