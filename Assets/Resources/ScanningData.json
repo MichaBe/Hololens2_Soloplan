@@ -11,6 +11,10 @@
 		{
 			"id": "16041997",
 			"name": "Ivan Levarda"
+		},
+		{
+			"id": "28122020",
+			"name": "Lea Scholtes"
 		}
 	],
 	"tourData": [
@@ -36,8 +40,8 @@
 
 				},
 				{
-					"id": 695,
-					"code": "695",
+					"id": 358,
+					"code": "358",
 					"comment": null,
 					"SSCCStatus": 0,
 					"destinationLane": {
@@ -55,10 +59,10 @@
 					"comment": null,
 					"SSCCStatus": 0,
 					"destinationLane": {
-						"id": 10,
-						"designation": "Linie 10",
+						"id": 11,
+						"designation": "Linie 11",
 						"laneType": "normal",
-						"posInLane": 1
+						"posInLane": 0
 					},
 
 					"weight": 9.7
@@ -72,97 +76,24 @@
 						"id": 11,
 						"designation": "Linie 11",
 						"laneType": "normal",
-						"posInLane": 0
+						"posInLane": 2
 					},
 
 					"weight": 1.7
-				}
-			]
-		},{
-			"id": 983451,
-			"areaType": 2,
-			"startLane": "10",
-			"startTime": "16:00",
-			"ssccs": [
-				{
-					"id": 945,
-					"code": "945",
-					"comment": null,
-					"SSCCStatus": 0,
-					"destinationLane": {
-						"id": 10,
-						"designation": "Linie 10",
-						"laneType": "normal",
-						"posInLane": 0
-					},
-
-					"weight": 12.3
-
 				},
 				{
-					"id": 678,
-					"code": "678",
-					"comment": null,
-					"SSCCStatus": 0,
-					"destinationLane": {
-						"id": 10,
-						"designation": "Linie 10",
-						"laneType": "normal",
-						"posInLane": 1
-					},
-
-					"weight": 9.7
-				},
-				{
-					"id": 285,
-					"code": "285",
-					"comment": null,
-					"SSCCStatus": 0,
-					"destinationLane": {
-						"id": 10,
-						"designation": "Linie 10",
-						"laneType": "normal",
-						"posInLane": 9999
-					},
-
-					"weight": 32.7
-				}
-			]
-		},
-		{
-			"id": 675231,
-			"areaType": 1,
-			"startLane": "2",
-			"startTime": "16:45",
-			"ssccs": [
-				{
-					"id": 358,
-					"code": "358",
+					"id": 395,
+					"code": "395",
 					"comment": null,
 					"SSCCStatus": 0,
 					"destinationLane": {
 						"id": 99,
 						"designation": "Zwischenlager",
 						"laneType": "zl",
-						"posInLane": 1
+						"posInLane": 2
 					},
 
-					"weight": 89.3
-
-				},
-				{
-					"id": 481,
-					"code": "481",
-					"comment": null,
-					"SSCCStatus": 0,
-					"destinationLane": {
-						"id": 11,
-						"designation": "Linie 11",
-						"laneType": "normal",
-						"posInLane": 1
-					},
-
-					"weight": 2.5
+					"weight": 3.8
 				},
 				{
 					"id": 653,
@@ -173,10 +104,10 @@
 						"id": 11,
 						"designation": "Linie 11",
 						"laneType": "normal",
-						"posInLane": 3
+						"posInLane": 1
 					},
 
-					"weight": 9.7
+					"weight": 0.9
 				},
 				{
 					"id": 659,
@@ -184,13 +115,13 @@
 					"comment": null,
 					"SSCCStatus": 0,
 					"destinationLane": {
-						"id": 10,
-						"designation": "Linie 10",
+						"id": 13,
+						"designation": "Linie 13",
 						"laneType": "normal",
-						"posInLane": 2
+						"posInLane": 0
 					},
 
-					"weight": 1.7
+					"weight": 1.2
 				}
 			]
 		},
@@ -201,8 +132,8 @@
 			"startTime": "17:30",
 			"ssccs": [
 				{
-					"id": 946,
-					"code": "946",
+					"id": 678,
+					"code": "678",
 					"comment": null,
 					"SSCCStatus": 0,
 					"destinationLane": {
@@ -212,36 +143,7 @@
 						"posInLane": 0
 					},
 
-					"weight": 1.7
-				},
-				{
-					"id": 481,
-					"code": "481",
-					"comment": null,
-					"SSCCStatus": 0,
-					"destinationLane": {
-						"id": 11,
-						"designation": "Linie 11",
-						"laneType": "normal",
-						"posInLane": 1
-					},
-
-					"weight": 2.5
-				},
-				{
-					"id": 358,
-					"code": "358",
-					"comment": null,
-					"SSCCStatus": 0,
-					"destinationLane": {
-						"id": 99,
-						"designation": "Zwischenlager",
-						"laneType": "zl",
-						"posInLane": 1
-					},
-
-					"weight": 89.3
-
+					"weight": 9.7
 				},
 				{
 					"id": 653,
@@ -252,10 +154,39 @@
 						"id": 11,
 						"designation": "Linie 11",
 						"laneType": "normal",
-						"posInLane": 3
+						"posInLane": 1
 					},
 
-					"weight": 9.7
+					"weight": 0.9
+				},
+				{
+					"id": 946,
+					"code": "653",
+					"comment": null,
+					"SSCCStatus": 0,
+					"destinationLane": {
+						"id": 11,
+						"designation": "Linie 11",
+						"laneType": "normal",
+						"posInLane": 2
+					},
+
+					"weight": 1.7
+				},
+				{
+					"id": 358,
+					"code": "358",
+					"comment": null,
+					"SSCCStatus": 0,
+					"destinationLane": {
+						"id": 99,
+						"designation": "Zwischenlager",
+						"laneType": "zl",
+						"posInLane": 0
+					},
+
+					"weight": 2.5
+
 				}
 			]
 		}
