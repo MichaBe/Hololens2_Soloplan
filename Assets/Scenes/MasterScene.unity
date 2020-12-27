@@ -53343,6 +53343,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4418491593469004834, guid: 2aff3e168adad54449465f664a8b0042,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00237
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418491593469004834, guid: 2aff3e168adad54449465f664a8b0042,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.11190491
+      objectReference: {fileID: 0}
     - target: {fileID: 4418491593835107934, guid: 2aff3e168adad54449465f664a8b0042,
         type: 3}
       propertyPath: m_Mesh
@@ -53788,6 +53798,11 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6871861688608821288, guid: 2aff3e168adad54449465f664a8b0042,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6871861688660033963, guid: 2aff3e168adad54449465f664a8b0042,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -53871,7 +53886,7 @@ PrefabInstance:
     - target: {fileID: 6871861690318696388, guid: 2aff3e168adad54449465f664a8b0042,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6871861690340410386, guid: 2aff3e168adad54449465f664a8b0042,
         type: 3}
