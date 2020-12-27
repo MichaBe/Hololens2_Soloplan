@@ -27249,7 +27249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateLinkedTransform: 0
   moveLerpTime: 0.2
-  rotateLerpTime: 0.4
+  rotateLerpTime: 0.2
   scaleLerpTime: 0
   maintainScale: 1
   smoothing: 1
@@ -27260,7 +27260,7 @@ MonoBehaviour:
   faceUserDefinedTargetTransform: 0
   targetToFace: {fileID: 0}
   pivotAxis: 7
-  minDistance: 0.2
+  minDistance: 0.4
   maxDistance: 0.7
   defaultDistance: 1
   maxViewHorizontalDegrees: 35
@@ -33268,7 +33268,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904216104}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b58d4c8e733c9f49924f3a22b1b4983, type: 3}
   m_Name: 
@@ -48737,7 +48737,7 @@ PrefabInstance:
     - target: {fileID: 4296537938946056370, guid: c347437b23b260148a162eae3e803aea,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4296537938946056375, guid: c347437b23b260148a162eae3e803aea,
         type: 3}
@@ -49215,6 +49215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306496518723547995, guid: 7cd5f708a95daa946a12f6f1f93d44fd,
+        type: 3}
+      propertyPath: maxDistance
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4023670439303617617, guid: 7cd5f708a95daa946a12f6f1f93d44fd,
         type: 3}

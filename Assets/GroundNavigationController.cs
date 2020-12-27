@@ -111,7 +111,10 @@ public class GroundNavigationController : MonoBehaviour
 
     public void deactivateCurrentPackagePlaceholder()
     {
+        if (isCurrentTourUnload())
+        {
             currentActivePackagePlaceholder.SetActive(false);
+        }
     }
 
     public void enableInboundWithoutHorizontalPath()
