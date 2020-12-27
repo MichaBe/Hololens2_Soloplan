@@ -4735,6 +4735,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881089986}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &882194547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6285543730837301667, guid: 197ded485a3ee564b87a18246d11eaaf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6285543732187865483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &882194553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882194547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b3eff181cc4244a8a14234096e62fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFocusRequired: 0
+  keywords:
+  - keyword: Scan On
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 882194554}
+          m_MethodName: StartScanning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Scan Off
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 882194554}
+          m_MethodName: StopScanning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  persistentKeywords: 0
+  speechConfirmationTooltipPrefab: {fileID: 8046114618238072051, guid: 271778f6c957b524981067a81d238394,
+    type: 3}
+--- !u!114 &882194554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882194547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307d732b5fba4af41950f0dfb7b07fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addingNew: 0
+  sDatatype: 2
+  nextUI: {fileID: 6285543732187865485}
+  ErrorUI: {fileID: 0}
+  groundNavigation: {fileID: 1578963212}
+  tourlist: {fileID: 6285543732187865484}
 --- !u!1 &906132461
 GameObject:
   m_ObjectHideFlags: 0
@@ -5595,6 +5666,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001102759}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1017883826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4296537938742482614, guid: c347437b23b260148a162eae3e803aea,
+    type: 3}
+  m_PrefabInstance: {fileID: 4296537938924079893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1044603681
 GameObject:
   m_ObjectHideFlags: 0
@@ -6022,6 +6099,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069527087}
   m_CullTransparentMesh: 0
+--- !u!1 &1071338082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4296537938946056373, guid: c347437b23b260148a162eae3e803aea,
+    type: 3}
+  m_PrefabInstance: {fileID: 4296537938924079893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1071338090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071338082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b3eff181cc4244a8a14234096e62fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFocusRequired: 0
+  keywords:
+  - keyword: Scan On
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1071338091}
+          m_MethodName: StartScanning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Scan Off
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1071338091}
+          m_MethodName: StopScanning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  persistentKeywords: 0
+  speechConfirmationTooltipPrefab: {fileID: 8046114618238072051, guid: 271778f6c957b524981067a81d238394,
+    type: 3}
+--- !u!114 &1071338091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071338082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307d732b5fba4af41950f0dfb7b07fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addingNew: 0
+  sDatatype: 0
+  nextUI: {fileID: 2009927359}
+  ErrorUI: {fileID: 1017883826}
+  groundNavigation: {fileID: 0}
+  tourlist: {fileID: 0}
 --- !u!1 &1080902710
 GameObject:
   m_ObjectHideFlags: 0
@@ -6918,7 +7066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1354047939
 Transform:
   m_ObjectHideFlags: 0
@@ -7312,7 +7460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1462533076
 Transform:
   m_ObjectHideFlags: 0
@@ -7890,8 +8038,8 @@ MonoBehaviour:
   faceUserDefinedTargetTransform: 0
   targetToFace: {fileID: 0}
   pivotAxis: 7
-  minDistance: 1
-  maxDistance: 1.2
+  minDistance: 0.2
+  maxDistance: 0.7
   defaultDistance: 1
   maxViewHorizontalDegrees: 35
   maxViewVerticalDegrees: 35
@@ -10830,7 +10978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2009753406
 Transform:
   m_ObjectHideFlags: 0
@@ -11083,7 +11231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d9acc7968244a8886f3af591305bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeProfile: {fileID: 11400000, guid: 7e7c962b9eb9dfa44993d5b2f2576752, type: 2}
+  activeProfile: {fileID: 11400000, guid: f555af6ea4feee743bda397b37abb943, type: 2}
 --- !u!4 &2041854667
 Transform:
   m_ObjectHideFlags: 0
@@ -12698,7 +12846,7 @@ PrefabInstance:
     - target: {fileID: 4296537938946056370, guid: c347437b23b260148a162eae3e803aea,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4296537938946056375, guid: c347437b23b260148a162eae3e803aea,
         type: 3}
@@ -13046,7 +13194,7 @@ PrefabInstance:
     - target: {fileID: 6285543730837301664, guid: 197ded485a3ee564b87a18246d11eaaf,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6285543730837301665, guid: 197ded485a3ee564b87a18246d11eaaf,
         type: 3}
@@ -13082,6 +13230,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285543731147936984, guid: 197ded485a3ee564b87a18246d11eaaf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285543731147936991, guid: 197ded485a3ee564b87a18246d11eaaf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -218
       objectReference: {fileID: 0}
     - target: {fileID: 6285543731418603640, guid: 197ded485a3ee564b87a18246d11eaaf,
         type: 3}
@@ -13201,7 +13359,7 @@ PrefabInstance:
     - target: {fileID: 8499143469660410302, guid: 197ded485a3ee564b87a18246d11eaaf,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8499143469698082432, guid: 197ded485a3ee564b87a18246d11eaaf,
         type: 3}
@@ -13364,6 +13522,77 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6285543732187865483}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6285543732187865487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8499143469660410293, guid: 197ded485a3ee564b87a18246d11eaaf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6285543732187865483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6285543732187865488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285543732187865487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b3eff181cc4244a8a14234096e62fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFocusRequired: 0
+  keywords:
+  - keyword: Scan On
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6285543732187865498}
+          m_MethodName: StartScanning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - keyword: Scan Off
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6285543732187865498}
+          m_MethodName: StopScanning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  persistentKeywords: 0
+  speechConfirmationTooltipPrefab: {fileID: 8046114618238072051, guid: 271778f6c957b524981067a81d238394,
+    type: 3}
+--- !u!114 &6285543732187865498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285543732187865487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307d732b5fba4af41950f0dfb7b07fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addingNew: 0
+  sDatatype: 1
+  nextUI: {fileID: 9074202254037322677}
+  ErrorUI: {fileID: 6285543732187865486}
+  groundNavigation: {fileID: 0}
+  tourlist: {fileID: 0}
 --- !u!1001 &6871861690248875343
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 using ZXing;
@@ -12,7 +12,6 @@ public class BarcodeScanning : MonoBehaviour
     public CheckIdType sDatatype;
 
     private WebCamTexture wCamTexture;
-    private Rect screenRect;
 
     private DataManager manager;
 
@@ -39,8 +38,10 @@ public class BarcodeScanning : MonoBehaviour
         if (gameObject.GetComponent<BarcodeScanning>().enabled)
         {
             barcodeReader = new BarcodeReader();
+            barcodeReader.Options.PossibleFormats = new System.Collections.Generic.List<BarcodeFormat>();
+            barcodeReader.Options.PossibleFormats.Add(BarcodeFormat.QR_CODE);
+            barcodeReader.Options.TryHarder = false;
             scanArea = transform.GetComponent<Image>();
-            screenRect = new Rect(0, 0, Screen.width, Screen.height);
             gameManager = GameObject.FindGameObjectWithTag("Manager");
             manager = DataManager.Instance;
             wCamTexture = gameManager.GetComponent<Webcam>().GetWebCamTexture();
@@ -75,22 +76,17 @@ public class BarcodeScanning : MonoBehaviour
         return encoded;
     }
 
+    private int frames = 0;
     private void Update()
     {
-        delay += Time.deltaTime;
-        if (delay >= 1)
-        {
+        frames++;
+        if (frames % 40 == 0) {
             try
             {
                 if (!wCamTexture.isPlaying)
                 {
                     wCamTexture.Play();
                 }
-
-               
-                barcodeReader.Options.PossibleFormats = new System.Collections.Generic.List<BarcodeFormat>();
-                barcodeReader.Options.PossibleFormats.Add(BarcodeFormat.QR_CODE);
-                barcodeReader.Options.TryHarder = false;
 
                 var result = barcodeReader.Decode(wCamTexture.GetPixels32(),
                   wCamTexture.width, wCamTexture.height);
