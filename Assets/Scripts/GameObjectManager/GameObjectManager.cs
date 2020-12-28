@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameObjectManager : MonoBehaviour
 {
-    private string[] mainScreenNames = new string[] { "LoginSelectionMenu", "LoginVoice", "LoginAusweis", "Einstempeln", "Ausstempeln", "HOME MENU", "Inbound", "Outbound", "Benachrichtigungen", "DailyTasksMenu"};
+    private string[] mainScreenNames = new string[] { "LoginSelectionMenu", "LoginVoice", "LoginAusweis", "Einstempeln", "Ausstempeln", "HOME MENU", "Inbound", "Outbound", "Benachrichtigungen", "DailyTasksMenu", "LogOut"};
     private GameObject[] mainScreenObjects;
 
     // Start is called before the first frame update
