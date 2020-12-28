@@ -34,15 +34,22 @@ public class GroundNavigationController : MonoBehaviour
     private GameObject interimStorage;
     [SerializeField]
     private GameObject interimStoragePackages;
+    
+    [SerializeField]
+    private GameObject hardcodedPathToZl;
+    [SerializeField]
+    private GameObject hardcodedInterimStoragePackages;
+    
 
     private static List<GameObject> activeGroundNavigationItems = new List<GameObject>();
     private static GameObject currentActivePackagePlaceholder;
     
     public void updateGroundNavigation()
     {
-        // show ground navigation only for an unloading tour 
         if (isCurrentTourUnload())
+            // show ground navigation for an unloading tour 
         {
+            
             disableAllActiveElementsInGroundNavigation();
             activateInbound();
             
@@ -72,6 +79,17 @@ public class GroundNavigationController : MonoBehaviour
                     break;
             }
         }
+        else // show ground navigation for a loading tour 
+        {
+            if (DataManager.Instance.currentTour.areaType == 2 &&
+                DataManager.Instance.currentPackage.destinationLane.laneType == "zl"
+            ) // Falls es sich um eine beladen Tour handelt und das Paket im Zwischenlager liegt
+            {
+                hardcodedPathToZl.SetActive(true);
+                activeGroundNavigationItems.Add(hardcodedPathToZl);
+                setPackagePlaceholderActive(hardcodedInterimStoragePackages, true);
+            }
+        }
     }
 
     private void activateInbound()
@@ -95,7 +113,7 @@ public class GroundNavigationController : MonoBehaviour
         }
     }
 
-        private void setPackagePlaceholderActive(GameObject lanePackages, bool shouldActivate)
+    private void setPackagePlaceholderActive(GameObject lanePackages, bool shouldActivate)
     {
         int lanePosition = DataManager.Instance.currentPackage.destinationLane.posInLane;
         var lanePackagesList = new GameObject[lanePackages.transform.childCount];
@@ -111,9 +129,10 @@ public class GroundNavigationController : MonoBehaviour
 
     public void deactivateCurrentPackagePlaceholder()
     {
-        if (isCurrentTourUnload())
+        currentActivePackagePlaceholder.SetActive(false);
+        if (!isCurrentTourUnload())
         {
-            currentActivePackagePlaceholder.SetActive(false);
+            hardcodedPathToZl.SetActive(false);
         }
     }
 
