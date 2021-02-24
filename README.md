@@ -112,17 +112,17 @@ __Eine Tour mit Paketen__
 ### Scan der QR-Codes
 Das Scannen von QR kommt an drei Stellen vor. Jeweils auf den Unity Objekten "Scan Area" unterschiedlich in der Hierarchie.
 
-<img src="Documentation/img/ScanArea.jpg" alt="Scan Area" width="250" height="450">
+<img src="Documentation/img/ScanArea.png" alt="Scan Area" width="250" height="450">
 
 Beim Ausführen der App im Unity Player kann man das Scannen von QR-Codes simulieren. Dabei muss bei __allen drei__ Scan Areas das Script "ScanSimulator.cs" aktiveirt werden.
-<img src="Documentation/img/DevMode.jpg" alt="DevMode" width="250" height="450">
+<img src="Documentation/img/DevMode.png" alt="DevMode" width="250" height="450">
 
 Dann kann die Taste <kbd>K</kbd> gedrückt werden um das Scannen des Ausweises, der Tour oder des Pakets zu Simulieren ohne dass tatsächlich QR-Codes mit der Kamera gescannt werden müssen. 
 
 :bangbang: ACHTUNG! 
 Ist nur dieses Script bei allen drei Scan Areas aktiviert und wird ein Deployment auf der Hololens 2 gemacht, so wird man keine QR-Codes mit der Hololens Kamera scannen können! Achte bevor du einen build machst und deployst, dass nur das "Barcode Scanning" Script aktiviert ist.
 
-<img src="Documentation/img/NormalMode.jpg" alt="DevMode" width="250" height="450">
+<img src="Documentation/img/NormalMode.png" alt="DevMode" width="250" height="450">
 
 ### Handmenü
 
