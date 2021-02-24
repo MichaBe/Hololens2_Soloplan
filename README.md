@@ -26,14 +26,14 @@ Tools die installiert werden müssen:
 
 :warning: Das Mixed Reality Toolkit (MRTK) muss nicht intsalliert werden. Dieses ist bereits in der Version 2.3.0 eingebunden und wird nach dem clonen des Repos zur verfügung stehen. (Neuere Versionen sind vorhanden, es ist abzuwägen ob ein Upgrade lohnend und möglich ist)
 
-__Detailiertere Anweisungen gibt es unter [Microsoft Mixed Reality Entwicklung - Installieren der Tools](https://docs.microsoft.com/de-de/windows/mixed-reality/develop/install-the-tools?tabs=unity)__
+Detailiertere Anweisungen gibt es unter __[Microsoft Mixed Reality Entwicklung - Installieren der Tools](https://docs.microsoft.com/de-de/windows/mixed-reality/develop/install-the-tools?tabs=unity)__
 
 Nach der Installation der Tools, das Repo in ein beliebiges Verzeichnis clonen und das Projekt mit Unity aufmachen.
 
 ## Deployment auf Hololens 2 
 Nachdem die oben genannten Tools installiert sind, das Repo gecloned wurde und das Projekt erfolgreich in Unity gestertet wurde, kann dieser [Guide](https://docs.microsoft.com/de-de/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02#building-your-application-to-your-hololens-2) befolgt werden, um die Anwendung auf die Hololens 2 zu deployen.
 
-## Dokumentation der wichtigsten Codekomponenten
+# Dokumentation der wichtigsten Komponenten
 
 ### Data Management 
 Die Hauptkomponente der Anwendung ist [DataManager.cs](Assets/Scripts/DataManager.cs) welche an das Unity Objekt Manager angehängt ist.
@@ -46,7 +46,7 @@ Dieses Singleton kann in anderen Scripten referenziert werden um beispielsweise 
 
 
 
-### Format der JSON Daten Datei
+### Format der JSON Datei
 Die [ScanningData.json](Assets/Resources/ScanningData.json) dient momentan als Datenqulle. In der sind alle Benutzer, Touren und Pakete der Touren gespeichert sowie die dazugehörigen IDs die für die QR Codes verwendet werden. 
 
 __Benutzer__
@@ -110,6 +110,19 @@ __Eine Tour mit Paketen__
 
 
 ### Scan der QR-Codes
+Das Scannen von QR kommt an drei Stellen vor. Jeweils auf den Unity Objekten "Scan Area" unterschiedlich in der Hierarchie.
+
+<img src="Documentation/img/ScanArea.jpg" alt="Scan Area" width="250" height="450">
+
+Beim Ausführen der App im Unity Player kann man das Scannen von QR-Codes simulieren. Dabei muss bei __allen drei__ Scan Areas das Script "ScanSimulator.cs" aktiveirt werden.
+<img src="Documentation/img/DevMode.jpg" alt="DevMode" width="250" height="450">
+
+Dann kann die Taste <kbd>K</kbd> gedrückt werden um das Scannen des Ausweises, der Tour oder des Pakets zu Simulieren ohne dass tatsächlich QR-Codes mit der Kamera gescannt werden müssen. 
+
+:bangbang: ACHTUNG! 
+Ist nur dieses Script bei allen drei Scan Areas aktiviert und wird ein Deployment auf der Hololens 2 gemacht, so wird man keine QR-Codes mit der Hololens Kamera scannen können! Achte bevor du einen build machst und deployst, dass nur das "Barcode Scanning" Script aktiviert ist.
+
+<img src="Documentation/img/NormalMode.jpg" alt="DevMode" width="250" height="450">
 
 ### Handmenü
 
@@ -121,13 +134,4 @@ Am ende einer Tour Zusammenfassung anzeigen
 Navigation nur Prototypisch und harcoded 
 Performance des Sannings sehr schlecht 
 Spracheingabe der Login oder paketcodes
-
-### Wall of Fame (or Shame)
-
-Bachelorprojekt 
-
-Masterprojekt 
-
-Happy Coding :hearts:
-
 
