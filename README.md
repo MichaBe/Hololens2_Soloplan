@@ -1,6 +1,6 @@
 # Augemented Reality in der Logisitk
-<img src="Documentation/img/Logo_Soloplan.png" alt="Soloplan Logo" width="250" height="75" style="margin-right: 1em">
-<img src="Documentation/img/Logo_Hochschule_Kempten.png" alt="Hochschule Kempten Logo" width="200" height="75">
+<img src="Documentation/img/Logo_Soloplan.png" alt="Soloplan Logo" width="250" height="75" style="float: right;">
+<img src="Documentation/img/Logo_Hochschule_Kempten.png" alt="Hochschule Kempten Logo" width="200" height="75" style="float: right;">
 
 
 <small>Ein Projekt der Hochschule Kempten in Kooperation mit der Firma [__Soloplan__](https://www.soloplan.de/)</small>. 
