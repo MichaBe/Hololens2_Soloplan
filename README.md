@@ -50,7 +50,7 @@ Dieses Singleton kann in anderen Scripten referenziert werden um beispielsweise 
 Die [ScanningData.json](Assets/Resources/ScanningData.json) dient momentan als Datenqulle. In der sind alle Benutzer, Touren und Pakete der Touren gespeichert sowie die dazugehörigen IDs die für die QR Codes verwendet werden. 
 
 __Benutzer__
-```json
+```
 {
 	"loginData": [
 		{
@@ -62,7 +62,7 @@ __Benutzer__
 
 ```
 __Eine Tour mit Paketen__
-```json
+```
 ...
 "tourData": [
 		{
