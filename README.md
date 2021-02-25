@@ -40,12 +40,9 @@ Nachdem die oben genannten Tools installiert sind, das Repo gecloned wurde und d
 ## Data Management 
 Die Hauptkomponente der Anwendung ist [DataManager.cs](Assets/Scripts/DataManager.cs) welche an das Unity Objekt Manager angehängt ist.
 
-Dieses Singleton liest die JSON Datei [ScanningData.json](Assets/Resources/ScanningData.json) die sich unter [Assets/Ressources/](Assets/Resources/) befindet, und kümmert sich für die Hauptlogiken wie get/set der aktuellen Tour, get/set des aktuellen Benutzers, get/set des gescannten Pakets, get der Touren, get der Pakete einer Tour, etc. Die Methoden sind einfach zu verstehen und bedürfen keiner weiteren Erklärung. 
+Dieses Singleton liest die JSON Datei [ScanningData.json](Assets/Resources/ScanningData.json) die sich unter [Assets/Ressources/](Assets/Resources/) befindet, und kümmert sich für die Hauptlogiken wie get/set der aktuellen Tour, get/set des aktuellen Benutzers, get/set des gescannten Pakets, get der Touren, get der Pakete einer Tour, etc. Die Methoden sind einfach zu verstehen und bedürfen keiner weiteren Erklärung. Dieses Singleton kann in anderen Skripten referenziert werden, um beispielsweise eine Liste aller Touren zu erstellen.
 
 Momentan wird [ScanningData.json](Assets/Resources/ScanningData.json) nur gelesen und Änderungen während der Verwendung der AR App werden nicht persistiert. Nach Restart der App wird der Zustand also zurückgesetzt wie er in der JSON definiert ist.
-
-Dieses Singleton kann in anderen Skripten referenziert werden, um beispielsweise eine Liste aller Touren zu erstellen.
-
 
 
 ## Format der JSON Datei
