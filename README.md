@@ -109,27 +109,27 @@ __Eine Tour mit Paketen__
 
 
 ## Scan der QR-Codes
-Das Scannen von QR kommt an drei Stellen vor. Jeweils auf den Unity Objekten "Scan Area" unterschiedlich in der Hierarchie.
+Das Scannen von QR-Codes kommt an drei Stellen vor. Jeweils auf den Unity Objekten "Scan Area" unterschiedlich in der Hierarchie.
 
 <img src="Documentation/img/ScanArea.png" alt="Scan Area" width="250" height="450">
 
 Beim Ausführen der App im Unity Player kann man das Scannen von QR-Codes simulieren. Dabei muss bei __allen drei__ Scan Areas das Skript "ScanSimulator.cs" aktiviert werden.
 
-<img src="Documentation/img/DevMode.png" alt="DevMode" width="250" height="450">
-
 __Simulation des QR-Codes scanning__
+
+<img src="Documentation/img/DevMode.png" alt="DevMode" width="250" height="450">
 
 Die Taste <kbd>K</kbd> kann gedrückt werden um das Scannen des Ausweises, der Tour oder des Pakets im Unity Player zu simulieren, ohne dass tatsächlich QR-Codes mit der Kamera gescannt werden müssen. 
 
 :bangbang: ACHTUNG! 
-Ist nur dieses Skript bei allen drei Scan Areas aktiviert und ein Deployment auf der Hololens 2 wird gemacht, so wird man keine QR-Codes mit der Hololens Kamera scannen können! Achte bevor du einen build machst und deployst, dass nur das "Barcode Scanning" Skript aktiviert ist.
+Ist nur dieses Skript bei allen drei Scan Areas aktiviert und ein Deployment auf der Hololens 2 wird gemacht, so wird man keine QR-Codes mit der Hololens Kamera scannen können! Achte bevor du einen Build machst und deployst, dass nur das "Barcode Scanning" Skript aktiviert ist.
 
 <img src="Documentation/img/NormalMode.png" alt="NormalMode" width="250" height="450">
 
 ## Handmenü
 Das Handmenü wird aktiviert indem man die Handfläche vor die Hololens stellt. Es bietet dem Anwender eine Navigation zum Home Bildschirm, den Benachrichtigungen und den Account Informationen. 
 
-<img src="Documentation/img/HandMenu.png" alt="HandMenu" width="450" height="250">
+<img src="Documentation/img/HandMenu.PNG" alt="HandMenu" width="450" height="250">
 
 Im Unity Player können die Hände des Benutzers simuliert werden (Die linke Hand mit der <kbd>Shift</kbd> Taste, die rechte Hand mit <kbd>Space</kbd>). Mit <kbd>strg</kbd> und dem Mousewheel kann die Hand um ihre Achse gedreht werden, sodass die die Handfläche zum Anwender zeigt und das Handmenü aktiviert wird. 
 
@@ -163,14 +163,14 @@ public void setActiveGameObjectsInactive()
 ```
 Dabei ist die Methode setActiveGameObjectsInactive() definiert, die aus einem Array der wichtigsten Bildschirmnamen, die momentan in der Szene aktiven Objekte findet und deaktiviert. Diese Methode wird an das Click-Event von jedem Button der Navigation angehängt. Zusätzlich wird eingestellt, welchen Bildschirm der Button beim Click aktivieren soll.
 
-<img src="Documentation/img/HandMenuButton.png" alt="HandMenuButton" width="650" height="450">
+<img src="Documentation/img/HandMenuButton.PNG" alt="HandMenuButton" width="650" height="450">
 
 
 ## Navigation am Boden
 
 Für die Navigation am Boden ist das [GroundNavigationController.cs](Assets/GroundNavigationController.cs) Skript zuständig.
 
-<img src="Documentation/img/GroundNavigation.png" alt="GroundNavigation" width="450" height="250">
+<img src="Documentation/img/GroundNavigation.PNG" alt="GroundNavigation" width="450" height="250">
 
 Das Skript implementiert  folgendes Konzept: 
 
