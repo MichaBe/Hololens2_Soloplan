@@ -131,7 +131,7 @@ Das Handmenü wird aktiviert indem man die Handfläche vor die Hololens stellt. 
 
 <img src="Documentation/img/HandMenu.PNG" alt="HandMenu" width="450" height="250">
 
-Im Unity Player können die Hände des Benutzers simuliert werden (Die linke Hand mit der <kbd>Shift</kbd> Taste, die rechte Hand mit <kbd>Space</kbd>). Mit <kbd>strg</kbd> und dem Mousewheel kann die Hand um ihre Achse gedreht werden, sodass die die Handfläche zum Anwender zeigt und das Handmenü aktiviert wird. 
+Im Unity Player können die Hände des Benutzers simuliert werden (Die linke Hand mit der <kbd>Shift</kbd> Taste, die rechte Hand mit <kbd>Space</kbd>). Mit <kbd>strg</kbd> und dem Mousewheel kann die Hand um ihre Achse gedreht werden, sodass die Handfläche zum Anwender zeigt und das Handmenü aktiviert wird. 
 
 Für die Logik der Navigation ist das [GameObjectManager.cs](Assets/Scripts/GameObjectManager/GameObjectManager.cs) Skript zuständig. 
 
@@ -161,7 +161,7 @@ public void setActiveGameObjectsInactive()
         return gameObjects;
     }
 ```
-Dabei ist die Methode setActiveGameObjectsInactive() definiert, die aus einem Array der wichtigsten Bildschirmnamen, die momentan in der Szene aktiven Objekte findet und deaktiviert. Diese Methode wird an das Click-Event von jedem Button der Navigation angehängt. Zusätzlich wird eingestellt, welchen Bildschirm der Button beim Click aktivieren soll.
+Dabei ist die Methode setActiveGameObjectsInactive() definiert, die aus einem Array der wichtigsten Bildschirmnamen, die momentan in der Szene aktiven Objekte findet, und deaktiviert. Diese Methode wird an das Click-Event von jedem Button der Navigation angehängt. Zusätzlich wird eingestellt, welchen Bildschirm der Button beim Click aktivieren soll.
 
 <img src="Documentation/img/HandMenuButton.PNG" alt="HandMenuButton" width="650" height="450">
 
@@ -182,7 +182,7 @@ Dies ist nur eine prototypische Lösung, die aufzeigen soll, wie eine Navigation
 
 ## Momentane Limitationen und Herausforderungen 
 ### Persistenz der Daten
-Eine Möglichkeit die Daten, die sich während der Verwendung der Anwendung verändern, gibt es momentan nicht. Es ist nachzudenken ob eine Datenbank verwendet werden oder eine lokale Speicherung erfolgen soll. 
+Eine Möglichkeit der Speicherung von Daten, die sich während der Verwendung der Anwendung verändern, gibt es momentan nicht. Es ist nachzudenken ob eine Datenbank verwendet werden oder eine lokale Speicherung erfolgen soll. 
 
 ### Zusammenfassung am Ende einer Tour
 Eine Zusammenfassung, die dem Benutzer am Ende einer Tour gezeigt werden kann, fehlt momentan. 
